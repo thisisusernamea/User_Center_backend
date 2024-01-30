@@ -17,3 +17,6 @@ create table user
     planetCode   varchar(512)                       null comment '星球编号'
 )
     comment '用户';
+
+use yupi;
+alter table user add tags varchar(1024) null comment '标签列表';
