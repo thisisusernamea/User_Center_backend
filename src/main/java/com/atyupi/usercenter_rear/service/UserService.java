@@ -2,8 +2,10 @@ package com.atyupi.usercenter_rear.service;
 
 import com.atyupi.usercenter_rear.model.domain.User;
 import com.baomidou.mybatisplus.extension.service.IService;
+import org.w3c.dom.stylesheets.LinkStyle;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
 * @author 常俊杰
@@ -43,5 +45,10 @@ public interface UserService extends IService<User> {
      */
     User getSafetyUser(User originUser);
 
-
+    /**
+     * 根据标签搜索用户
+     * @param tagNameList 用户拥有的标签列表
+     * @return
+     */
+    List<User> searchUserByTags(List<String> tagNameList);
 }

@@ -19,4 +19,4 @@ create table user
     comment '用户';
 
 use yupi;
-alter table user add tags varchar(1024) null comment '标签列表';
+alter table user add tags varchar(1024) null comment '标签列表 json字符串';
